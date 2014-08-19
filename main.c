@@ -13,10 +13,7 @@ void ms_delay(int ms)
 
 void ButtonPressed_action(void)
 {
-	if (freeze == false)
-		{ freeze = true; STM_EVAL_LEDOn(LED_Red); }
-	else
-		{ freeze = false; STM_EVAL_LEDOff(LED_Red); }
+    STM_EVAL_LEDOn(LED_Red);
 }
 
 void ButtonReleased_action(void) { // nothing to do }
