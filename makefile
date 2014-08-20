@@ -5,7 +5,7 @@ STLINK=~/.stlink
 SRCS=main.c system_stm32f4xx.c my_stm32f4_discovery.c my_stm32f4_discovery_audio_codec.c
 
 # Binaries will be generated with this name (.elf, .bin, .hex, etc)
-PROJ_NAME=blinky
+PROJ_NAME=sine
 
 # Put your STM32F4 library code directory here
 STM_COMMON=$(HOME)/.stm32/STM32F4-Discovery_FW_V1.1.0

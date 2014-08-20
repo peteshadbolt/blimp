@@ -21,9 +21,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdbool.h>
-#include "constants.h"
 #include "stm32f4xx.h"
-#include "stm32f4xx_gpio.h"
+#include "constants.h"
 /** @addtogroup Utilities
   * @{
   */
