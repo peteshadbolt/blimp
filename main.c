@@ -1,6 +1,5 @@
 #include "main.h"
  
-
 //Quick hack, approximately 1ms delay
 void ms_delay(int ms)
 {
@@ -16,7 +15,9 @@ void ButtonPressed_action(void)
     STM_EVAL_LEDOn(LED_Red);
 }
 
-void ButtonReleased_action(void) { // nothing to do }
+void ButtonReleased_action(void) { 
+    // nothing to do
+}
 
 int main(void)
 {
@@ -27,24 +28,26 @@ int main(void)
     GPIOD->MODER = (1 << 26);             
 
     // Initialize LEDs
-    STM_EVAL_LEDInit(LED_Green);
-    STM_EVAL_LEDInit(LED_Orange);
-    STM_EVAL_LEDInit(LED_Red);
-    STM_EVAL_LEDInit(LED_Blue);
+    /*STM_EVAL_LEDInit(LED_Green);*/
+    /*STM_EVAL_LEDInit(LED_Orange);*/
+    /*STM_EVAL_LEDInit(LED_Red);*/
+    /*STM_EVAL_LEDInit(LED_Blue);*/
 
     // Initialize buttons
-    STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);
+    /*STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);*/
 
     //Set up a timer for ms interrupts
-    set_sys_tick();
+    /*set_sys_tick();*/
 
     // Get ready to make sound
-    synth_init();
-    audio_init();
+    /*synth_init();*/
+    /*audio_init();*/
 
 
     for (;;) {
        ms_delay(500);
        GPIOD->ODR ^= (1 << 13);           // Toggle the pin 
     }
+    return 0;
 }
+

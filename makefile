@@ -1,9 +1,8 @@
-
 # Put your stlink folder here so make burn will work.
 STLINK=~/.stlink
 
 # Put your source files here (or *.c, etc)
-SRCS=main.c system_stm32f4xx.c
+SRCS=main.c system_stm32f4xx.c my_stm32f4_discovery.c my_stm32f4_discovery_audio_codec.c
 
 # Binaries will be generated with this name (.elf, .bin, .hex, etc)
 PROJ_NAME=blinky
@@ -17,7 +16,8 @@ STM_COMMON=$(HOME)/.stm32/STM32F4-Discovery_FW_V1.1.0
 CC=arm-none-eabi-gcc
 OBJCOPY=arm-none-eabi-objcopy
 
-CFLAGS  = -g -O2 -Wall -Tstm32_flash.ld 
+#CFLAGS  = -g -O2 -Wall -Tstm32_flash.ld 
+CFLAGS  = -g -O2 -Tstm32_flash.ld 
 CFLAGS += -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork
 CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CFLAGS += -I.

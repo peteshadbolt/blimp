@@ -23,8 +23,8 @@
 //#include "timers.h"
 //#include "soundGen.h"
 #include "my_stm32f4_discovery.h"
+#include "my_stm32f4_discovery_audio_codec.h"
 //#include "stm32f4_discovery.h"
-//#include "my_stm32f4_discovery_audio_codec.h"
 //#include "stm32fxxx_it.h"
 //#include "delay.h"
 //#include "chorusFD.h"
@@ -34,3 +34,5 @@
 //#include "adsr.h"
 //#include "sequencer.h"
 #endif /* __MAIN_H */
+
+
